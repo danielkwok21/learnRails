@@ -17,3 +17,9 @@ v20.11.0
 $ yarn -v
 1.22.2
 ```
+
+
+## FAQ
+
+- `Webpacker can't find application` or `error Command "webpack" not found`  
+https://github.com/rails/webpacker/issues/2825#issuecomment-779881026
