@@ -1,1 +1,28 @@
-<h1>Home page</h1>
+<% if flash[:notice] %>
+<div class="alert alert-success"><%= flash[:notice] %></div>
+<% end %>
+
+<% if Current.user.present? %>
+    <h3>Users</h3>
+
+    <table class="table">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @users.each do |user| %>
+        <tr>
+            <td><%= user.id %></td>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+        </tr>
+        <% end %>
+    </tbody>
+    </table>
+<% else %>
+    <h3>Login to view a list of users</h3>
+<% end %>
