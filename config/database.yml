@@ -11,7 +11,7 @@ default: &default
   database: learn_rails
   username: root
   password: password
-  host: <%= ENV.fetch("DB_HOST")%>
+  host: 127.0.0.1
   port: 5432
 
 development:

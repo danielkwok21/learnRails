@@ -12,13 +12,5 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  app:
-    build: 
-      context: .
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./:/opt/app  
-
 volumes:
   postgres_data:
