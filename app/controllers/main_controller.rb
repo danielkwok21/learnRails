@@ -1,8 +1,8 @@
 class MainController < ApplicationController 
     def index
-        @some_secret_key=ENV['SOME_SECRET_KEY']
-        
-        ipAPI =  IpApi.new()
-        @response = ipAPI.get_details_by_ip(request.remote_ip)
+        is_logged_in = session[:user_id]
+        if is_logged_in
+            @users = User.all()
+        end
     end
 end
